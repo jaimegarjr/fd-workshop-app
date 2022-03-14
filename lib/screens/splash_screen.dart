@@ -4,8 +4,6 @@ import 'package:fd_workshop_app/utils/constants.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
 
-import 'package:flutter_svg/flutter_svg.dart';
-
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
 
@@ -62,8 +60,8 @@ class _SplashScreenState extends State<SplashScreen> {
                 topRightVector,
               ),
             ),
-            Center(
-              child: const Text(
+            const Center(
+              child: Text(
                 'tasker',
                 style: kSplashLogoText,
               ),

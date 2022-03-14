@@ -1,5 +1,4 @@
 import 'package:fd_workshop_app/models/todo_controller.dart';
-import 'package:fd_workshop_app/widgets/todo_item_card.dart';
 import 'package:flutter/material.dart';
 import '../utils/constants.dart';
 
@@ -51,13 +50,10 @@ class _AddToDoItemCardState extends State<AddToDoItemCard> {
             ),
             style: kCompleteListItemText,
           ),
-          trailing: Padding(
-            padding: EdgeInsets.only(right: 10.0),
-            child: Icon(
-              Icons.add,
-              size: 28,
-              color: kThemePrimaryColor.withOpacity(0.5),
-            ),
+          trailing: Icon(
+            Icons.add,
+            size: 28,
+            color: kThemePrimaryColor.withOpacity(0.5),
           ),
         ),
       ),

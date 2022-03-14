@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import '../utils/constants.dart';
 
-enum ToDoStatus { complete, incomplete }
-
 class ToDoItemCard extends StatefulWidget {
   final String toDoText;
   final bool state;
@@ -14,7 +12,7 @@ class ToDoItemCard extends StatefulWidget {
 }
 
 class _ToDoItemCardState extends State<ToDoItemCard> {
-  ToDoStatus? _status = ToDoStatus.incomplete;
+  int? _status = 1;
 
   @override
   Widget build(BuildContext context) {
@@ -43,10 +41,10 @@ class _ToDoItemCardState extends State<ToDoItemCard> {
           ),
           trailing: Radio(
             toggleable: true,
-            value: widget.state ? ToDoStatus.incomplete : ToDoStatus.complete,
+            value: widget.state ? 1 : 0,
             groupValue: _status,
             activeColor: kThemeSecondaryColor,
-            onChanged: (ToDoStatus? value) {
+            onChanged: (int? value) {
               setState(() {
                 _status = value;
               });
